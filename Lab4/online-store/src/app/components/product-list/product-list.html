@@ -1,0 +1,15 @@
+<div class="wrapper">
+  <header class="navbar">
+    <div class="nav-content">
+      <h1 class="logo">Kaspi<span>Shop</span></h1>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="catalog-grid">
+      @for (item of products; track item.id) {
+        <app-product-card [product]="item"></app-product-card>
+      }
+    </div>
+  </main>
+</div>
