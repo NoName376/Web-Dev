@@ -1,10 +1,7 @@
 // 5.2
-let a = +prompt("The first number?", "");
-let b = +prompt("The second number?", "");
+let a = prompt("The first number?", "");
+let b = prompt("The second number?", "");
 alert( a + b );
-
-// 6.35.toFixed(1) == 6.3
-// Math.round(6.35 * 10) / 10 == 6.4
 
 function readNumber() {
   let num;
@@ -14,8 +11,6 @@ function readNumber() {
   if (num === null || num === '') return null;
   return +num;
 }
-
-// i != 10 -> Infinite loop because of precision loss
 
 function random(min, max) {
   return min + Math.random() * (max - min);

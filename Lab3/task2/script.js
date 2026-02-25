@@ -47,4 +47,7 @@ addBtn.addEventListener("click", function() {
         list.removeChild(item);
     });
 
+
+
+
 });
