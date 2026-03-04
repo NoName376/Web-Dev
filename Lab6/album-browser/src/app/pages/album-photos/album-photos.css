@@ -1,0 +1,38 @@
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.photo-item {
+  background: #000;
+  border: 1px solid #004400;
+  padding: 10px;
+  border-radius: 15px;
+  transition: 0.3s;
+  transform: skewX(-1deg);
+}
+
+.photo-item:hover {
+  transform: scale(1.1) skewX(0deg);
+  border-color: #00ff00;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.3);
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  filter: sepia(100%) hue-rotate(-2deg) brightness(0.8);
+  transition: 0.3s;
+}
+
+.photo-item:hover img {
+  filter: none;
+}
+
+.photo-item p {
+  font-size: 10px;
+  margin-top: 10px;
+  height: 30px;
+  overflow: hidden;
+}

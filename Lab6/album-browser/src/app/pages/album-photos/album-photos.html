@@ -1,0 +1,12 @@
+<div *ngIf="photos$ | async as photos">
+
+  <h3>Photos</h3>
+
+  <div class="grid">
+    <div class="photo" *ngFor="let photo of photos">
+      <img [src]="photo.thumbnailUrl">
+      <p>{{ photo.title }}</p>
+    </div>
+  </div>
+
+</div>

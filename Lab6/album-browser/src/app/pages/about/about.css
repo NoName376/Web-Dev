@@ -1,0 +1,22 @@
+.matrix {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 50px;
+  background-color: #000;
+  border: 2px solid #00ff00;
+  border-radius: 40px 5px 40px 5px;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.2);
+  transform: rotate(-2deg);
+  position: relative;
+}
+
+p {
+  font-family: 'Space Mono', monospace;
+  font-size: 14px;
+  color: #00ff00;
+  margin: 15px 0;
+  padding: 12px;
+  background: rgba(0, 255, 0, 0.05);
+  border-left: 3px solid #00ff00;
+  border-radius: 0 10px 10px 0;
+}

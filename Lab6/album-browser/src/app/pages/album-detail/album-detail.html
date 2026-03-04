@@ -1,0 +1,15 @@
+<div class="detail-wrap" *ngIf="album">
+  <div class="detail-card">
+    <h2>ENTITY_ID: {{ album.id }}</h2>
+    <div class="input-group">
+      <label>Rename:</label>
+      <input [(ngModel)]="album.title">
+    </div>
+    <div class="controls">
+      <button class="btn-ui" (click)="save()">Save</button>
+      <button class="btn-ui" [routerLink]="['photos']">View Photos</button>
+      <button class="btn-ui danger" routerLink="/albums">Back</button>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+</div>
