@@ -1,0 +1,35 @@
+.navbar {
+  background: white;
+  border-bottom: 1px solid #eee;
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.nav-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  color: #333;
+}
+
+.logo span { color: #f14635; }
+
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.catalog-grid {
+  display: grid;
+  /* Адаптивная магия */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px;
+}
