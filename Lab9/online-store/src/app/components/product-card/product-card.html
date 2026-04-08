@@ -1,0 +1,39 @@
+<div class="product-card">
+  <div class="image-section">
+    <div class="main-img-container">
+      <img [src]="displayImage" [alt]="product().name" class="main-img">
+    </div>
+    <div class="thumb-nav">
+      @for (img of product().images; track img) {
+        <img [src]="img"
+             (click)="setThumbnail(img)"
+             [class.active]="displayImage === img"
+             class="thumb">
+      }
+    </div>
+  </div>
+
+  <div class="details">
+    <a [href]="product().link" target="_blank" class="title">{{ product().name }}</a>
+
+    <div class="meta">
+      <span class="rating">⭐ {{ product().rating }}</span>
+      <span class="likes-count">❤️ {{ product().likes }}</span>
+      <span class="price">{{ product().price | number }} ₸</span>
+    </div>
+
+    <p class="description">{{ product().description }}</p>
+
+    <div class="card-actions">
+      <div class="share-actions">
+        <button (click)="share('tg')" class="btn-share tg">Telegram</button>
+        <button (click)="share('wa')" class="btn-share wa">WhatsApp</button>
+      </div>
+
+      <div class="control-actions">
+        <button (click)="like()" class="btn-like">Like</button>
+        <button (click)="delete()" class="btn-delete">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

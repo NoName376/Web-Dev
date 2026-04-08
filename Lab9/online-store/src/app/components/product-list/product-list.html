@@ -1,0 +1,11 @@
+<div class="catalog-grid">
+  @for (item of displayProducts(); track item.id) {
+    <app-product-card
+      [product]="item"
+      (remove)="handleRemove($event)" />
+  } @empty {
+    <div class="empty-state">
+      <p>No products available in this category.</p>
+    </div>
+  }
+</div>
