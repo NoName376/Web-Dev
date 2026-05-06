@@ -1,0 +1,29 @@
+{
+	"info": {
+		"name": "Lab 9 Online Shop",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Categories",
+			"item": [
+				{ "name": "List Categories", "request": { "method": "GET", "url": "http://localhost:8000/api/categories/" } },
+				{ "name": "Category Detail", "request": { "method": "GET", "url": "http://localhost:8000/api/categories/1/" } },
+				{ "name": "Create Category", "request": { "method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\"name\": \"Tech\"}" }, "url": "http://localhost:8000/api/categories/" } },
+				{ "name": "Update Category", "request": { "method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\"name\": \"Electronics\"}" }, "url": "http://localhost:8000/api/categories/1/" } },
+				{ "name": "Delete Category", "request": { "method": "DELETE", "url": "http://localhost:8000/api/categories/1/" } },
+				{ "name": "Products by Category", "request": { "method": "GET", "url": "http://localhost:8000/api/categories/1/products/" } }
+			]
+		},
+		{
+			"name": "Products",
+			"item": [
+				{ "name": "List Products", "request": { "method": "GET", "url": "http://localhost:8000/api/products/" } },
+				{ "name": "Product Detail", "request": { "method": "GET", "url": "http://localhost:8000/api/products/1/" } },
+				{ "name": "Create Product", "request": { "method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\"name\": \"iPhone\", \"price\": 1000, \"description\": \"Smartphone\", \"count\": 10, \"is_active\": true, \"category\": 1, \"image\": \"url\", \"link\": \"url\", \"rating\": 5, \"likes\": 10}" }, "url": "http://localhost:8000/api/products/" } },
+				{ "name": "Update Product", "request": { "method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}], "body": { "mode": "raw", "raw": "{\"name\": \"iPhone 15 Pro\", \"price\": 1200, \"description\": \"Updated\", \"count\": 5, \"is_active\": true, \"category\": 1, \"image\": \"url\", \"link\": \"url\", \"rating\": 4.9, \"likes\": 100}" }, "url": "http://localhost:8000/api/products/1/" } },
+				{ "name": "Delete Product", "request": { "method": "DELETE", "url": "http://localhost:8000/api/products/1/" } }
+			]
+		}
+	]
+}
